@@ -98,4 +98,7 @@ bashio::log.info "Preparations done."
 echo ""
 bashio::log.info "Executing command: ${COMMAND}"
 /usr/bin/autossh -V
-exec ${COMMAND}
+while true
+do
+  exec ${COMMAND}
+done
